@@ -1,0 +1,27 @@
+:root{
+    --cor1:black;
+    --cor2:black;
+    --cor3:black;
+    --cor4:black;
+    --cor5:black;
+
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    padding: 5px;
+    background-color: rgba(125, 68, 240, 0.436);
+}
+
+header{
+    text-align: center;
+}
+
+#navbar {
+    font-weight: bold;
+
+}
