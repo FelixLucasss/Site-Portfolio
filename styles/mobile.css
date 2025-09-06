@@ -1,9 +1,6 @@
 :root{
-    --cor1:black;
-    --cor2:black;
-    --cor3:black;
-    --cor4:black;
-    --cor5:black;
+    --corFundo : rgba(39, 25, 77, 0.986);
+
 
 }
 
@@ -12,16 +9,104 @@
     margin: 0px;
 }
 
-html{
-    padding: 5px;
-    background-color: rgba(125, 68, 240, 0.436);
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(49, 0, 128, 0.616);
 }
 
 header{
+    background: #444;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    display: none;
+    flex-direction: column;
+    background: #444;
+    width: 100%;
     text-align: center;
 }
 
-#navbar {
-    font-weight: bold;
+#menu.show{
+    display: flex;
+}
 
+li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div{
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+}
+
+#container_presentation{
+    margin-top: 70px;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius:100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+}
+
+#container_prof_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#container_prof_img img {
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 150px;
+}
+
+#container_basic{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 30px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius:100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
 }
