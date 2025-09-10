@@ -120,6 +120,7 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white;
+    height: auto;
 }
 
 #container_tec ul {
@@ -144,7 +145,7 @@ li a{
     gap: 15px;
     overflow-x: auto;  /* scroll horizontal */
     overflow-y: hidden; 
-    height: 650px;     /* altura fixa pra caber 3 linhas */
+    height: auto;     /* altura fixa pra caber 3 linhas */
     padding: 10px;
     margin: 20px 10px; /* margem como os outros containers */
     padding: 20px;
@@ -181,7 +182,7 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white;
-    height: 300px;
+    height: auto;
 }
 
 #container_futere_projects{
@@ -190,5 +191,99 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white;
-    height: 300px;
+    height: auto;
+}
+
+#personal {
+    margin: 20px 10px; /* margem como os outros containers */
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white;
+    height: auto;
+}
+
+#languages{
+    margin: 20px 10px; /* margem como os outros containers */
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white; 
+}
+
+#languages li {
+    display: grid; /* Ativar Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas, ocupando frações iguais da tela (1fr + 1fr = 50% + 50%) */
+    gap: 15px; /* espaço entre os itens */
+    margin: 20px 10px; /* margem como os outros containers */
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white; 
+    font-weight: bolder;
+}
+
+#academics {
+    margin: 20px 10px; /* margem como os outros containers */
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white; 
+}
+
+#academics li{
+    margin: 20px 10px; /* margem como os outros containers */
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white; 
+    list-style: none;
+}
+
+#academics p{
+    font-weight: bolder;
+}
+
+#soft-skills{
+    margin: 20px 10px; /* margem como os outros containers */
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white; 
+}
+
+#soft-skills ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none; /* opcional, remove bolinhas */
+    padding: 0;
+    margin: 20px 10px;
+    padding: 5px;
+}
+
+footer{
+    background-color: #000000;
+    color: white;
+    height: auto;
+}
+
+#contact ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, fr);
+    gap: 10px;
+    list-style: none;
+}
+
+#contact li{
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 40px;
+}
+
+#contact a{
+    color: black;
+    justify-content: center;
 }
