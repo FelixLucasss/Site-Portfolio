@@ -167,10 +167,15 @@ li a{
 }
 
 #container_projects img {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
+    transition: transform 0.3s ease; /* animação suave */
 }
 
+#container_projects img:hover{
+    transform: scale(1.5); /* aumenta a imagem em 50% */
+    z-index: 10; /* garante que fique por cima */
+}
 #container_projects h3, 
 #container_projects p {
     margin: 5px 0;
@@ -287,3 +292,4 @@ footer{
     color: black;
     justify-content: center;
 }
+
