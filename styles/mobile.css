@@ -173,7 +173,7 @@ li a{
 }
 
 #container_projects img:hover{
-    transform: scale(1.5); /* aumenta a imagem em 50% */
+    transform: scale(1.7); /* aumenta a imagem em 50% */
     z-index: 10; /* garante que fique por cima */
 }
 #container_projects h3, 
