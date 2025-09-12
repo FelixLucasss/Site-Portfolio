@@ -9,12 +9,71 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Reset CSS -->
-    <link rel="stylesheet" href="./styles/restar.css">
+    <link rel="stylesheet" href="../styles/restar.css">
 
     <!-- CSS -->
-     
+    <link rel="stylesheet" href="../styles/detailsmobile.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="../styles/detailsdesktop.css">
+
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">MENU DE NAVEGAÇÃO</div>
+            <div class="menu-toggle" id="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="menu">
+                <li><a href="../index.html">Página Principal</a></li>
+                <li><a href="#container_tec">Detalhes</a></li>
+                <li><a href="#container_projects">Imagens</a></li>
+                <li><a href="#container_timeline">Considerações</a></li>
+                <li><a href="#container_futere_projects">Acesso ao projeto</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <main>
+        <div id="project_main_content">
+            <div id="project_details">
+            <img src="../assets/Icons/LegendaryMotorsport-GTAV-Logo.png" alt="Logo Principal do projeto">
+            <h1>Legendary Motosport</h1>
+            <p>Este projeto foi meu primeiro projeto de site, criado inteiramente para testar minhas habilidades com <strong>HTML</strong> e <strong>CSS</strong>, inspirado pela loja dentro do jogo GTA 5, tentei recriar o visual unico da loja do jogo, enquanto aprendia sobre o CSS.</p>
+            <p>Esse projeto teve inicio em 2023, sendo feito apenas para a versão desktop, devido a minha falta de conhecimento na época não cheguei a fazer nenhum script em JavaScript, nem a fazer responsividade no site para versão mobile. Mas ainda pretendo voltar a esse site e finalizar</p>
+            </div>
+
+            <div id="project_imgs">
+                <img src="https://picsum.photos/200/120" alt="Imagem 1 do projeto" id="project_img_main">
+                <img src="https://picsum.photos/200/120" alt="Imagem 2 do projeto" class="project_img_content">
+                <img src="https://picsum.photos/200/120" alt="Imagem 3 do projeto" class="project_img_content">
+                <img src="https://picsum.photos/200/120" alt="Imagem 4 do projeto" class="project_img_content">
+                <img src="https://picsum.photos/200/120" alt="Imagem 5 do projeto" class="project_img_content">
+            </div>
+
+            <div id="project_finalization">
+                <p>Após a "finalização" desse projeto, principalmente na época e com os conhecimentos que eu tinha, me senti bem satisfeito pelo progresso, porém não pelo resultado final, como dito anteriormente ainda preciso realmente finalizar esse site e ajustar algumas coisas, mas com certeza esse primeiro projeto foi o projeto mais divertido que ja fiz até agora</p>
+            </div>
+            <div id="project_link">
+                <a href="#">Link do projeto</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lucas Felix - Todos os direitos reservados.</p>
+        <p>Ultima atualização nesta página : 12/09/2025</p>
+        <div id="contact">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="#" target="_blank"><img src="../assets/Icons/Email Icon.png" alt="Email">Email</a></li>
+                    <li><a href="https://github.com/FelixLucasss" target="_blank"><img src="../assets/Icons/Github Icon.png" alt="GitHub">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/lucas-felix-38143b1a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="../assets/Icons/Linkedin Icon.png" alt="LinkedIn">LinkedIn</a></li>
+                </ul>
+            </div>
+    </footer>
+
+    <script src="../scripts/navbar.js"></script>
 </body>
 </html>
