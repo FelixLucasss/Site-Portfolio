@@ -272,6 +272,7 @@ footer{
     background-color: #000000;
     color: white;
     height: auto;
+    max-height: 170px;
 }
 
 #contact ul{

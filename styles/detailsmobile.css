@@ -106,10 +106,7 @@ footer{
     background-color: #000000;
     color: white;
     height: auto;
-}
-
-footer img{
-    height: 100px;
+    max-height: 170px;
 }
 
 #contact ul{
