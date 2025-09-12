@@ -1,0 +1,62 @@
+{
+    "legendary-motosport":{
+        "titulo": "Legendary Motosport",
+        "detalhes": "Esse projeto, foi inspirado no site de vendas de carros dentro do Jogo Grand Theft Auto 5 (GTA 5), foi meu primeiro projeto de site, criado inteiramente para testar minhas habilidades com HTML e CSS, tentei recriar o visual unico da loja do jogo, enquanto estava no começo do aprendizado sobre CSS.",
+        "detalhes2": "Esse projeto teve inicio em 2023, sendo feito apenas para a versão desktop, devido a minha falta de conhecimento na época não cheguei a fazer nenhum script ou responsividade para versão mobile. Mas ainda pretendo voltar a esse projeto e finalizar por completo.",
+        "consideracoes": "Após a 'finalização' desse projeto, principalmente na época e com os conhecimentos que eu tinha, me senti bem satisfeito pelo progresso, porém não pelo resultado final, como dito anteriormente ainda preciso realmente finalizar esse site e ajustar algumas coisas, mas com certeza esse primeiro projeto foi o projeto mais divertido que ja fiz até agora.",
+        "link":"https://felixlucasss.github.io/Projetos/Legendary%20Motosports/paginicial.html",
+        "logo":"../assets/logos/LegendaryMotorsport-GTAV-Logo.png",
+        "imagens":[
+            "../assets/Projects-imgs/LegendaryMotosport1.jpg",
+            "../assets/Projects-imgs/LegendaryMotosport2.jpg",
+            "../assets/Projects-imgs/LegendaryMotosport3.jpg",
+            "../assets/Projects-imgs/LegendaryMotosport4.jpeg",
+            "../assets/Projects-imgs/LegendaryMotosport5.jpeg"
+        ]
+    },
+    "discord":{
+        "titulo":"Clone Discord",
+        "detalhes":"Esse projeto foi para estudo durante o Bootcamp da DIO no Bootcamp Santander 2025 - Front-End, foi um dos projetos desenvolvidos durante o Bootcamp, usando apenas CSS e HTML com pouca responsividade.",
+        "detalhes2":"Não foi nada muito dificil, e me serviu apenas como lembrete de como fazer as coisas em HTML e CSS.",
+        "consideracoes":"Foi um bom site, facil de fazer, nada muito complexo nem muito facil, realmente foi criado apenas para o intuito do Bootcamp.",
+        "link":"https://felixlucasss.github.io/Projetos/Discord/discord.html",
+        "logo":"../assets/logos/Discord-logo.png",
+        "imagens":[
+            "../assets/Projects-imgs/Discord1.jpg",
+            "../assets/Projects-imgs/Discord2.jpg",
+            "../assets/Projects-imgs/Discord3.jpg"
+        ]
+
+    },
+    "pokedex":{
+        "titulo":"Pokemon API",
+        "detalhes":"Projeto criado com intuito de estudo de API, criado para o Bootcamp Santander 2025 - Front-End, utilizando HTML, CSS mas a principal parte sendo utilização de API e JavaScritp para criar a Pokedex.",
+        "detalhes2":"Esse foi um projeto mais inovador pois até o momento não tinha conhecimento de uso de API e JavaScript, não foi em uma escala grande mas ainda foi um desafio para começar os principios de programação.",
+        "consideracoes":"Foi um projeto inovador naquele momento, mesmo sendo apenas para o Bootcamp Santander, ainda foi algo novo para mim, e ainda me diverti criando a Pokedex",
+        "link":"https://felixlucasss.github.io/Projetos/Pokedex/index.html",
+        "logo":"../assets/logos/International_Pokémon_logo.svg.png",
+        "imagens":[
+            "../assets/Projects-imgs/Pokemon1.jpg",
+            "../assets/Projects-imgs/Pokemon2.jpg",
+            "../assets/Projects-imgs/Pokemon3.jpg",
+            "../assets/Projects-imgs/Pokemon4.jpg",
+            "../assets/Projects-imgs/Pokemon5.jpg"   
+        ]
+    },
+    "yu-gi-oh":{
+        "titulo":"Yu-Gi-Oh Duel",
+        "detalhes":"Um projeto bem desafiador, apesar de ter sido para o Bootcamp Santander 2025 - Front-End, foi um projeto desafiador em CSS e JavaScript, foi o projeto final do Bootcamp.",
+        "detalhes2":"Nesse projeto foi nescessário aplicar todo o conhecimento adquirido durante o bootcamp, tanto tudo que foi aprendido em HTML, CSS, e JavaScript foi aplicado nesse projeto legal, e desafiador!",
+        "consideracoes":"Esse projeto foi um muito divertido, tanto pelo resultado do projeto, quanto pela dificuldade, para o projeto final do Bootcamp, eu diria que realmente foi aplicado tudo que foi ensinado, e aplicado de forma divertida e desafiadora.",
+        "link":"https://felixlucasss.github.io/Projetos/Yu-Gi-Oh/index.html",
+        "logo":"../assets/logos/Yu-Gi-Oh-Logo-2001.png",
+        "imagens":[
+            "../assets/Projects-imgs/Yu-Gi-Oh1.jpg",
+            "../assets/Projects-imgs/Yu-Gi-Oh2.jpg",
+            "../assets/Projects-imgs/Yu-Gi-Oh3.jpg",
+            "../assets/Projects-imgs/Yu-Gi-Oh4.jpg",
+            "../assets/Projects-imgs/Yu-Gi-Oh5.jpg"
+        ]
+    }
+
+}
