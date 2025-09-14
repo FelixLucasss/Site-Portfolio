@@ -111,16 +111,30 @@ li a{
     background-color: white;
 }
 
-#container_tec {
-    display: grid; /* Ativar Grid Layout */
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas, ocupando frações iguais da tela (1fr + 1fr = 50% + 50%) */
-    gap: 15px; /* espaço entre os itens */
+#container_teclist{
     margin: 20px 10px; /* margem como os outros containers */
     padding: 20px;
     border: 3px solid black;
     border-radius: 20px;
     background-color: white;
     height: auto;
+}
+
+#container_teclist h2{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#container_tec {
+    display: grid; /* Ativar Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas, ocupando frações iguais da tela (1fr + 1fr = 50% + 50%) */
+    gap: 15px; /* espaço entre os itens */
+}
+
+#container_tec img{
+    height: 50px;
+    width: 50px;
 }
 
 #container_tec ul {
@@ -137,6 +151,20 @@ li a{
     font-weight: bolder;
 }
 
+#container_projectlist{
+    margin: 20px 10px; /* margem como os outros containers */
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#container_projectlist h2{
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+}
+
 #container_projects {
     display: grid;  /* Ativar Grid Layout */
     grid-template-rows: repeat(3, 1fr); /* 3 linhas fixas, cada linha ocupa 1 porção (33+33+33) */
@@ -147,11 +175,6 @@ li a{
     overflow-y: hidden; 
     height: auto;     /* altura fixa pra caber 3 linhas */
     padding: 10px;
-    margin: 20px 10px; /* margem como os outros containers */
-    padding: 20px;
-    border: 3px solid black;
-    border-radius: 20px;
-    background-color: white;
 }
 
 .projects {
@@ -179,15 +202,6 @@ li a{
 #container_projects h3, 
 #container_projects p {
     margin: 5px 0;
-}
-
-#container_timeline {
-    margin: 20px 10px; /* margem como os outros containers */
-    padding: 20px;
-    border: 3px solid black;
-    border-radius: 20px;
-    background-color: white;
-    height: auto;
 }
 
 #container_futere_projects{
@@ -220,12 +234,9 @@ li a{
     display: grid; /* Ativar Grid Layout */
     grid-template-columns: repeat(2, 1fr); /* 2 colunas, ocupando frações iguais da tela (1fr + 1fr = 50% + 50%) */
     gap: 15px; /* espaço entre os itens */
-    margin: 20px 10px; /* margem como os outros containers */
-    padding: 10px;
-    border: 3px solid black;
-    border-radius: 20px;
-    background-color: white; 
     font-weight: bolder;
+    display: flex;
+    margin: 15px;
 }
 
 #academics {
