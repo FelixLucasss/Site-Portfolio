@@ -1,0 +1,13 @@
+- carregar primeiro a frase "ola sou lucas felix", e animação da mão acenando, em seguida carregar todo o primeiro balão.
+
+-depois do primeiro balão carregar, fazer a imagem "aparecer subindo" junto com o mais sobre mim
+
+- quando rolar para baixo e chegar na parte de tecnologias, fazer com que cada item da lista seja carregado um por vez, surgindo da esquerda para a direita na ordem da lista.
+
+- nos projetos ainda sem ideia
+
+- projetos maiores e ambições, surgir de baixo para cima, e aparecer item por item igual em tecnologias
+
+- resumo pessoal surgir igual o "mais sobre mim"
+
+idiomas, formação e soft skills surgir como tecnologias.

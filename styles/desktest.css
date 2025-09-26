@@ -13,7 +13,6 @@ body{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(49, 0, 128, 0.616);
-    background-image: url(https://picsum.photos/200/120);
 }
 
 header{
@@ -31,7 +30,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 
 #menu{
@@ -70,6 +69,50 @@ li a{
     margin: 4px 0;
 }
 
+section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0; /* dá um respiro */
+}
+
+
+/* Primeira imagem: do início até metade de tecnologias */
+#bg-1 {
+  background-image: url('../assets/backgrounds/first_wallpaper.jpg');
+}
+
+/* Segunda imagem: do meio de tecnologias até projetos maiores */
+#bg-2 {
+  background-image: url('../assets/backgrounds/second_wallpaper.jpg');
+}
+
+/* Terceira imagem: do projetos maiores até o fim */
+#bg-3 {
+  background-image: url('../assets/backgrounds/last_wallpaper.jpg');
+}
+
+
+#presentation_img{
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#projects_img{
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
 #container_presentation{
     margin-top: 70px;
     text-align: center;
@@ -77,17 +120,16 @@ li a{
     padding: 30px;
     border-width: 3px;
     border-radius:100px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    background-color: white;
+    margin-left: 20vw;
+    margin-right: 20vw;
     backdrop-filter: blur(15px);
     background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
     overflow: hidden;
 }
 
-#container_presentation h1, 
-#container_presentation p{
+#container_presentation h1, #container_presentation p, #container_basic h2, #container_basic p{
     color: white;
 }
 
@@ -118,6 +160,13 @@ li a{
     margin-left: 10px;
     margin-right: 10px;
     background-color: white;
+    margin-left: 20Vw;
+    margin-right: 20vw;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
 }
 
 #container_teclist{
@@ -127,24 +176,27 @@ li a{
     border-radius: 20px;
     background-color: white;
     height: auto;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 #container_teclist h2{
     justify-content: center;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+#container_teclist img{
     height: 7vw;
 }
+
 
 #container_tec {
     display: grid; /* Ativar Grid Layout */
     grid-template-columns: repeat(2, 1fr); /* 2 colunas, ocupando frações iguais da tela (1fr + 1fr = 50% + 50%) */
     gap: 15px; /* espaço entre os itens */
-}
-
-#container_tec img{
-    height: 50px;
-    width: 50px;
+    padding-left: 6vw;
+    
 }
 
 #container_tec ul {
@@ -167,6 +219,8 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white;
+    margin-left: 7vw;
+    margin-right: 7vw;
 }
 
 #container_projectlist h2{
@@ -221,6 +275,10 @@ li a{
     border-radius: 20px;
     background-color: white;
     height: auto;
+    margin-left: 7VW;
+    margin-right: 7VW;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #personal {
@@ -230,6 +288,10 @@ li a{
     border-radius: 20px;
     background-color: white;
     height: auto;
+    margin-left: 7VW;
+    margin-right: 7VW;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #languages{
@@ -238,6 +300,10 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
+    margin-left: 7VW;
+    margin-right: 7VW;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #languages li {
@@ -255,6 +321,10 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
+    margin-left: 7VW;
+    margin-right: 7VW;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #academics li{
@@ -276,6 +346,10 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
+    margin-left: 7VW;
+    margin-right: 7VW;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #soft-skills ul {
@@ -294,6 +368,10 @@ footer{
     color: white;
     height: auto;
     max-height: 170px;
+}
+
+footer img{
+    height: 50px;
 }
 
 #contact ul{
@@ -315,6 +393,3 @@ footer{
     justify-content: center;
 }
 
-#contact img{
-    height: 7vw;
-}
