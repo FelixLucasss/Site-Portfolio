@@ -73,7 +73,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 /* Primeira imagem: do início até metade de tecnologias */
@@ -135,6 +135,23 @@ section {
     color: white;
 }
 
+#container_presentation h1{
+    width: 30ch;
+    font-family: monospace;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30);
+    margin-bottom: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes typing{
+    from{
+        width : 0ch; 
+    }
+}
+
 #container_prof_img{
     display: flex;
     justify-content: center;
@@ -169,6 +186,39 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
     overflow: hidden;
+}
+
+/* animação de surgir */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* começa levemente abaixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* todos começam invisíveis */
+#container_presentation p,
+#container_prof_img,
+#container_basic {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* delays diferentes */
+#container_presentation p {
+  animation-delay: 3s; /* depois da animação do h1 */
+}
+
+#container_prof_img {
+  animation-delay: 4s; /* aparece 1s depois */
+}
+
+#container_basic {
+  animation-delay: 5s; /* mais 1s depois */
 }
 
 #container_teclist{
@@ -300,7 +350,13 @@ section {
     margin-left: 7VW;
     margin-right: 7VW;
     margin-top: 50px;
-    margin-bottom: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #personal {
@@ -312,8 +368,14 @@ section {
     height: auto;
     margin-left: 7VW;
     margin-right: 7VW;
-    margin-top: 50px;
     margin-bottom: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #languages{
@@ -326,6 +388,13 @@ section {
     margin-right: 7VW;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #languages li {
@@ -335,6 +404,13 @@ section {
     font-weight: bolder;
     display: flex;
     margin: 15px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #academics {
@@ -347,6 +423,13 @@ section {
     margin-right: 7VW;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #academics li{
@@ -356,6 +439,13 @@ section {
     border-radius: 20px;
     background-color: white; 
     list-style: none;
+
+    backdrop-filter: blur(15px);
+    background: rgba(222, 222, 222, 0.1);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #academics p{
@@ -372,6 +462,13 @@ section {
     margin-right: 7VW;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #soft-skills ul {
@@ -414,4 +511,3 @@ footer img{
     color: black;
     justify-content: center;
 }
-
