@@ -1,10 +1,18 @@
-:root{
-    --corFundo : rgba(39, 25, 77, 0.986);
 
+/* To do list ::
+    -Arrumar rodapé
+    -Refazer NavBar
+    -Reutilizar para página de dentro do projeto
+
+*/
+
+:root{ /* :root é para salvar variaves reutilizaveis */
+    --corFundo : rgba(39, 25, 77, 0.986);
+    --Transparent : rgba(50, 50, 50, 0.1);
 
 }
 
-*{
+*{ /* seta padding e margin da pagina toda para 0 */
     padding: 0px;
     margin: 0px;
 }
@@ -12,8 +20,7 @@
 body{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(49, 0, 128, 0.616);
-    background-image: url(https://picsum.photos/200/120);
+    background-color: black;
 }
 
 header{
@@ -31,7 +38,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 
 #menu{
@@ -70,6 +77,50 @@ li a{
     margin: 4px 0;
 }
 
+section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 0;
+}
+
+/* Primeira imagem: do início até metade de tecnologias */
+#bg-1 {
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 90%, rgb(0, 0, 0, 1) 100%), url('../assets/backgrounds/first_wallpaper.jpg');
+}
+
+/* Segunda imagem: do meio de tecnologias até projetos maiores */
+#bg-2 {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7 )90%, rgba(0, 0, 0, 1) 100%), linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 90%, rgb(0, 0, 0, 1) 100%), url('../assets/backgrounds/second_wallpaper.jpg');
+    background-position: left;
+}
+
+/* Terceira imagem: do projetos maiores até o fim */
+#bg-3 {
+    background-image:linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7 )90%, rgba(0, 0, 0, 1) 100%), linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 90%, rgb(0, 0, 0, 1) 100%) , url('../assets/backgrounds/last_wallpaper.jpg');
+}
+
+
+#presentation_img{ /* Para deixar a foto redonda e centralizada */
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#projects_img{
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
 #container_presentation{
     margin-top: 70px;
     text-align: center;
@@ -79,16 +130,35 @@ li a{
     border-radius:100px;
     margin-left: 5vw;
     margin-right: 5vw;
-    background-color: white;
+
+    /* Deixar transparente */
     backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(130, 130, 130, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
     overflow: hidden;
 }
 
-#container_presentation h1, 
-#container_presentation p{
+#container_presentation h1, #container_presentation p, #container_basic h2, #container_basic p{
     color: white;
+}
+
+#container_presentation h1{
+    font-size: 20px;
+    width: 30ch;
+    font-family: monospace;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30);
+    margin-bottom: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes typing{
+    from{
+        width : 0ch; 
+    }
 }
 
 #container_prof_img{
@@ -115,9 +185,47 @@ li a{
     border-style: solid;
     border-width: 3px;
     border-radius:100px;
-    margin-left: 10px;
-    margin-right: 10px;
     background-color: white;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    backdrop-filter: blur(15px);
+    background: rgba(50, 50, 50, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+/* animação de surgir */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* começa levemente abaixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* todos começam invisíveis */
+#container_presentation p,
+#container_prof_img,
+#container_basic {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* delays diferentes */
+#container_presentation p {
+  animation-delay: 3s; /* depois da animação do h1 */
+}
+
+#container_prof_img {
+  animation-delay: 4s; /* aparece 1s depois */
+}
+
+#container_basic {
+  animation-delay: 5s; /* mais 1s depois */
 }
 
 #container_teclist{
@@ -127,24 +235,33 @@ li a{
     border-radius: 20px;
     background-color: white;
     height: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #container_teclist h2{
     justify-content: center;
     display: flex;
-    margin-bottom: 15px;
-    height: 7vw;
+    margin-bottom: 5px;
 }
+
+#container_teclist img{
+    height: 5vw;
+}
+
 
 #container_tec {
     display: grid; /* Ativar Grid Layout */
     grid-template-columns: repeat(2, 1fr); /* 2 colunas, ocupando frações iguais da tela (1fr + 1fr = 50% + 50%) */
     gap: 15px; /* espaço entre os itens */
-}
-
-#container_tec img{
-    height: 50px;
-    width: 50px;
+    padding-left: 6vw;
+    
 }
 
 #container_tec ul {
@@ -167,6 +284,14 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #container_projectlist h2{
@@ -185,6 +310,7 @@ li a{
     overflow-y: hidden; 
     height: auto;     /* altura fixa pra caber 3 linhas */
     padding: 10px;
+    
 }
 
 .projects {
@@ -197,6 +323,13 @@ li a{
     border-radius: 10px;
     border: 2px solid #000000;
     height: 180px; /* ajuste conforme necessidade */
+
+    backdrop-filter: blur(15px);
+    background: rgba(222, 222, 222, 0.1);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #container_projects img {
@@ -221,6 +354,16 @@ li a{
     border-radius: 20px;
     background-color: white;
     height: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #personal {
@@ -230,6 +373,16 @@ li a{
     border-radius: 20px;
     background-color: white;
     height: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #languages{
@@ -238,6 +391,17 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #languages li {
@@ -247,6 +411,13 @@ li a{
     font-weight: bolder;
     display: flex;
     margin: 15px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #academics {
@@ -255,6 +426,19 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
+    
 }
 
 #academics li{
@@ -264,6 +448,14 @@ li a{
     border-radius: 20px;
     background-color: white; 
     list-style: none;
+
+    backdrop-filter: blur(15px);
+    background: rgba(222, 222, 222, 0.1);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
+    
 }
 
 #academics p{
@@ -276,6 +468,17 @@ li a{
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    backdrop-filter: blur(15px);
+    background: var(--Transparent);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
 }
 
 #soft-skills ul {
@@ -287,34 +490,83 @@ li a{
     padding: 0;
     margin: 20px 10px;
     padding: 5px;
+    
 }
 
 footer{
-    background-color: #000000;
+    backdrop-filter: blur(15px);
+    background: rgba(130, 130, 130, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+footer p{
     color: white;
-    height: auto;
-    max-height: 170px;
+    padding-bottom: 10px;
 }
 
-#contact ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, fr);
-    gap: 10px;
-    list-style: none;
-}
-
-#contact li{
-    background-color: white;
-    border: 3px solid black;
-    border-radius: 40px;
-}
-
-#contact a{
-    color: black;
+.socials-container{
+    display: flex;
+    gap: 4vw;
     justify-content: center;
 }
 
-#contact img{
-    height: 7vw;
+.socials-container a{
+    background-color: white;
+    padding: 1em;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px black;
+}
+
+.socials-container a svg{
+    height: 32px;
+}
+
+.socials-container a::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+
+.socials-container a:hover{
+    background-color: var(--accent-color);
+    fill: white;
+}
+
+.socials-container a::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+
+}
+
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+
+.socials-container a:hover::after{
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
 }

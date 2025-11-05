@@ -1,10 +1,18 @@
-:root{
+
+/* To do list ::
+    -Arrumar rodapé
+    -Refazer NavBar
+    -Reutilizar para página de dentro do projeto
+
+*/
+
+:root{ /* :root é para salvar variaves reutilizaveis */
     --corFundo : rgba(39, 25, 77, 0.986);
     --Transparent : rgba(50, 50, 50, 0.1);
 
 }
 
-*{
+*{ /* seta padding e margin da pagina toda para 0 */
     padding: 0px;
     margin: 0px;
 }
@@ -12,7 +20,7 @@
 body{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(49, 0, 128, 0.616);
+    background-color: black;
 }
 
 header{
@@ -93,7 +101,7 @@ section {
 }
 
 
-#presentation_img{
+#presentation_img{ /* Para deixar a foto redonda e centralizada */
     position: absolute;
     z-index: -2;
     width: 100vw;
@@ -120,8 +128,8 @@ section {
     padding: 30px;
     border-width: 3px;
     border-radius:100px;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 
     /* Deixar transparente */
     backdrop-filter: blur(15px);
@@ -136,6 +144,7 @@ section {
 }
 
 #container_presentation h1{
+    font-size: 20px;
     width: 30ch;
     font-family: monospace;
     text-wrap: nowrap;
@@ -176,11 +185,9 @@ section {
     border-style: solid;
     border-width: 3px;
     border-radius:100px;
-    margin-left: 10px;
-    margin-right: 10px;
     background-color: white;
-    margin-left: 20Vw;
-    margin-right: 20vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     backdrop-filter: blur(15px);
     background: rgba(50, 50, 50, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -228,8 +235,8 @@ section {
     border-radius: 20px;
     background-color: white;
     height: auto;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     backdrop-filter: blur(15px);
     background: var(--Transparent);
     border: 1px solid rgba(132, 132, 132, 0.4);
@@ -245,7 +252,7 @@ section {
 }
 
 #container_teclist img{
-    height: 7vw;
+    height: 5vw;
 }
 
 
@@ -277,8 +284,8 @@ section {
     border: 3px solid black;
     border-radius: 20px;
     background-color: white;
-    margin-left: 7vw;
-    margin-right: 7vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     backdrop-filter: blur(15px);
     background: var(--Transparent);
     border: 1px solid rgba(132, 132, 132, 0.4);
@@ -347,8 +354,8 @@ section {
     border-radius: 20px;
     background-color: white;
     height: auto;
-    margin-left: 7VW;
-    margin-right: 7VW;
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-top: 50px;
 
     backdrop-filter: blur(15px);
@@ -366,8 +373,8 @@ section {
     border-radius: 20px;
     background-color: white;
     height: auto;
-    margin-left: 7VW;
-    margin-right: 7VW;
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-bottom: 50px;
 
     backdrop-filter: blur(15px);
@@ -384,8 +391,8 @@ section {
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
-    margin-left: 7VW;
-    margin-right: 7VW;
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-top: 50px;
     margin-bottom: 50px;
 
@@ -419,10 +426,11 @@ section {
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
-    margin-left: 7VW;
-    margin-right: 7VW;
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-top: 50px;
     margin-bottom: 50px;
+    justify-content: center;
 
     backdrop-filter: blur(15px);
     background: var(--Transparent);
@@ -430,6 +438,7 @@ section {
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
     overflow: hidden;
     color: white;
+    
 }
 
 #academics li{
@@ -446,6 +455,7 @@ section {
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
     overflow: hidden;
     color: white;
+    
 }
 
 #academics p{
@@ -458,8 +468,8 @@ section {
     border: 3px solid black;
     border-radius: 20px;
     background-color: white; 
-    margin-left: 7VW;
-    margin-right: 7VW;
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-top: 50px;
     margin-bottom: 50px;
 
@@ -480,13 +490,22 @@ section {
     padding: 0;
     margin: 20px 10px;
     padding: 5px;
+    
 }
 
 footer{
-    background-color: #000000;
+    backdrop-filter: blur(15px);
+    background: rgba(130, 130, 130, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+footer p{
     color: white;
-    height: auto;
-    max-height: 170px;
+    padding-bottom: 10px;
 }
 
 footer img{
@@ -510,4 +529,66 @@ footer img{
 #contact a{
     color: black;
     justify-content: center;
+}
+
+.socials-container{
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+}
+
+.socials-container a{
+    background-color: white;
+    padding: 1em;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px black;
+}
+
+.socials-container a svg{
+    height: 32px;
+}
+
+.socials-container a::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+
+.socials-container a:hover{
+    background-color: var(--accent-color);
+    fill: white;
+}
+
+.socials-container a::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+
+}
+
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+
+.socials-container a:hover::after{
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
 }

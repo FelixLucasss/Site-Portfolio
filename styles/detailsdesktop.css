@@ -1,0 +1,245 @@
+:root{ /* :root é para salvar variaves reutilizaveis */
+    --corFundo : rgba(39, 25, 77, 0.986);
+    --Transparent : rgba(50, 50, 50, 0.1);
+
+}
+
+*{ /* seta padding e margin da pagina toda para 0 */
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7 )95%, rgba(0, 0, 0, 1) 100%), linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 90%, rgb(0, 0, 0, 1) 100%), url('../assets/backgrounds/second_wallpaper.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    background: #444;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+#menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    display: none;
+    flex-direction: column;
+    background: #444;
+    width: 100%;
+    text-align: center;
+}
+
+#menu.show{
+    display: flex;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div{
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+}
+
+section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 0;
+}
+
+#project_details img {
+    height: 10vw;
+}
+
+#project_main_content{
+    margin-top: 70px;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    border-width: 3px;
+    border-radius:100px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 30px;
+
+    /* Deixar transparente */
+    backdrop-filter: blur(15px);
+    background: rgba(130, 130, 130, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+#project_details{
+    margin-bottom: 20px;
+}
+
+#project_imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+  
+}
+
+#project_imgs img {
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(15px);
+    background: rgba(130, 130, 130, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+/* Primeira imagem ocupa as duas colunas */
+#project_imgs img:first-child {
+    grid-column: span 2;
+    height: 20vw; /* torna a primeira maior */
+}
+
+/* Outras imagens (2 a 5) */
+#project_imgs img:nth-child(n+2) {
+    height: 10vw;
+}
+
+
+#project_link{
+    margin: 20px 10px; /* margem como os outros containers */
+    padding: 10px;
+}
+
+#project_link a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 100px;
+    backdrop-filter: blur(15px);
+    background: rgba(222, 222, 222, 0.1);
+    border: 1px solid rgba(132, 132, 132, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.);
+    overflow: hidden;
+    color: white;
+}
+
+#project_finalization{
+    margin-top: 20px;
+}
+
+footer{
+    backdrop-filter: blur(15px);
+    background: rgba(130, 130, 130, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+footer p{
+    color: white;
+    padding-bottom: 10px;
+}
+
+.socials-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.socials-container{
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+}
+
+.socials-container a{
+    background-color: white;
+    padding: 1em;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px black;
+}
+
+.socials-container a svg{
+    height: 32px;
+}
+
+.socials-container a::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+
+.socials-container a:hover{
+    background-color: var(--accent-color);
+    fill: white;
+}
+
+.socials-container a::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+
+}
+
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+
+.socials-container a:hover::after{
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
+}
