@@ -20,7 +20,12 @@ body{
 }
 
 header{
-    background: #444;
+   /* Deixar transparente */
+    backdrop-filter: blur(15px);
+    background: rgba(130, 130, 130, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
     color: white;
     position: fixed;
     top: 0;
@@ -44,13 +49,31 @@ nav{
     gap: 20px;
     display: none;
     flex-direction: column;
-    background: #444;
     width: 100%;
     text-align: center;
 }
 
 #menu.show{
     display: flex;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div{
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
 }
 
 li a{
